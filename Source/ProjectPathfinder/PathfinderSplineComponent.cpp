@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "LandscapeSplineComponent.h"
+#include "PathfinderSplineComponent.h"
 
 // Sets default values for this component's properties
 UPathfinderSplineComponent::UPathfinderSplineComponent()
@@ -18,6 +18,10 @@ UPathfinderSplineComponent::UPathfinderSplineComponent()
 void UPathfinderSplineComponent::BeginPlay()
 {
 	Super::BeginPlay();	
+
+	// Assuming you have a LandscapeSplineComponent reference.
+	ULandscapeSplinesComponent* SplineComponent = Spline->GetSplinesComponent();
+	//SplineComponent
 }
 
 
@@ -26,24 +30,8 @@ void UPathfinderSplineComponent::TickComponent(float DeltaTime, ELevelTick TickT
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-    //Spline->
+ 
 
-    // Assuming you have a LandscapeSplineComponent reference.
-    UPathfinderSplineComponent* SplineComponent = YourLandscapeSplineComponent;
-
-    // Check if the spline component is valid.
-    if (SplineComponent)
-    {
-        TArray<FLandscapeSplineConnection> SplinePoints;
-        SplineComponent->GetSplinePoints(SplinePoints);
-
-        for (const FLandscapeSplineConnection& SplinePoint : SplinePoints)
-        {
-            // Access spline point data, e.g., location.
-            FVector SplinePointLocation = SplinePoint.Location;
-
-            // You can access other data like tangent, etc., as needed.
-        }
-    }
+ 
 }
 
