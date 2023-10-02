@@ -31,22 +31,22 @@ public:
 	void FillSplineMeshComponentsArray();
 	
 	void FillLandscapeSplineControlPointsArray();
-	
+
 	void FillLandscapeSplineSegmentsArray();
 
 protected:
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	ALandscapeSplineActor* Spline = nullptr;
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	ULandscapeSplinesComponent* SplineComponent = nullptr;
-	
-	UPROPERTY(EditAnywhere)
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TArray<USplineMeshComponent*> SplineMeshComponents;
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TArray<ULandscapeSplineControlPoint*> LandscapeSplineControlPoints;
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TArray<ULandscapeSplineSegment*> LandscapeSplineSegments;
 };

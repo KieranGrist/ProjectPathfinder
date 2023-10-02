@@ -1,6 +1,5 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "PathfinderSplineComponent.h"
 
 // Sets default values for this component's properties
@@ -40,11 +39,7 @@ void UPathfinderSplineComponent::FillArrays()
 
 void UPathfinderSplineComponent::FillSplineMeshComponentsArray()
 {
-	SplineMeshComponents.Empty();
-	for (auto SplineMeshComponent : SplineComponent->GetSplineMeshComponents())
-	{
-		SplineMeshComponents.Add(SplineMeshComponent);
-	}
+	//SplineMeshComponents = SplineComponent->GetSplineMeshComponents();
 }
 
 void UPathfinderSplineComponent::FillLandscapeSplineControlPointsArray()
